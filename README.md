@@ -6,7 +6,7 @@ Devote is built by developers, for developers. Our vision is to have an applicat
 
 ## Wiki
 
-To learn more about our project, you can check out our [Wiki](https://git.uwaterloo.ca/bs2benip/cs398-project/-/wikis/Final-Report/Home)! There you'll find detailed information for our software development process including:
+To learn more about our project, you can check out our [Wiki](https://github.com/12958954/devote/wiki)! There you'll find detailed information for our software development process including:
 
 * Meeting minutes
 * Pages for each stage of the project e.g. architecture diagrams.
@@ -14,7 +14,7 @@ To learn more about our project, you can check out our [Wiki](https://git.uwater
 
 ## Issues and Milestones
 
-We use [Issues](https://git.uwaterloo.ca/bs2benip/cs398-project/-/issues) to track the work to be done (where an issue represents an assignable task, which may be a new feature, change to an existing feature, or a bug fix). [Milestones](https://git.uwaterloo.ca/bs2benip/cs398-project/-/milestones) are a way of grouping issues into Sprints.
+We use [Issues](https://github.com/12958954/devote/blob/main/issues.png) to track the work to be done (where an issue represents an assignable task, which may be a new feature, change to an existing feature, or a bug fix). [Milestones](https://github.com/12958954/devote/blob/main/milestones.png) are a way of grouping issues into Sprints.
 
 * Unassigned issues represent our Product Backlog
 * Issues are generally assigned to a sprint during the sprint kickoff meeting
