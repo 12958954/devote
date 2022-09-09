@@ -24,7 +24,7 @@ We use [Issues](https://git.uwaterloo.ca/bs2benip/cs398-project/-/issues) to tra
 
 Devote is a joint venture by four developers:
 
-* [Haifan Wang](/12958954)
+* [Haifan Wang](https://github.com/12958954)
 * [Baljinder Benipal](https://git.uwaterloo.ca/bs2benip)
 * [Linnea Palmblad](https://git.uwaterloo.ca/lpalmbla)
 * [Anushka Tayal](https://git.uwaterloo.ca/atayal)
