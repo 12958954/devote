@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import com.example.cs398project.NoteView?>
+<?import com.example.cs398project.TitleView?>
+<?import com.example.cs398project.DirectoryView?>
+<?import com.example.cs398project.ComboBoxView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cs398project.Controller">
+    <top>
+        <VBox>
+            <MenuBar VBox.vgrow="NEVER">
+                <Menu mnemonicParsing="false" text="Devote">
+                    <MenuItem onAction="#handleQuitMenu" mnemonicParsing="false" text="Quit"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="File">
+                    <MenuItem onAction="#createNewNote" mnemonicParsing="false" text="New"/>
+                    <MenuItem onAction="#saveNote" mnemonicParsing="false" text="Save"/>
+                    <MenuItem onAction="#createNewFolder" mnemonicParsing="false" text="New Folder"/>
+                    <MenuItem onAction="#deleteFolder" mnemonicParsing="false" text="Delete Folder"/>
+                    <MenuItem onAction="#renameFolder" mnemonicParsing="false" text="Rename Folder"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit" >
+                    <MenuItem onAction="#cut" mnemonicParsing="false" text="Cut"/>
+                    <MenuItem onAction="#copy" mnemonicParsing="false" text="Copy"/>
+                    <MenuItem onAction="#paste" mnemonicParsing="false" text="Paste"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Format" >
+                    <MenuItem onAction="#bulletList" mnemonicParsing="false" text="Bulleted list"/>
+                    <MenuItem onAction="#numberedList" mnemonicParsing="false" text="Numbered list"/>
+                    <MenuItem onAction="#formatCode" mnemonicParsing="false" text="Format Code"/>
+                    <Menu mnemonicParsing="false" text="Font">
+                        <MenuItem onAction="#bold" mnemonicParsing="false" text="Bold"/>
+                        <MenuItem onAction="#italic" mnemonicParsing="false" text="Italic"/>
+                        <MenuItem onAction="#underline" mnemonicParsing="false" text="Underline"/>
+                        <MenuItem onAction="#strikethrough" mnemonicParsing="false" text="Strikethrough"/>
+                        <MenuItem onAction="#fonts" mnemonicParsing="false" text="Fonts"/>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Text">
+                        <MenuItem onAction="#alignRight" mnemonicParsing="false" text="Align right"/>
+                        <MenuItem onAction="#alignLeft" mnemonicParsing="false" text="Align left"/>
+                        <MenuItem onAction="#centre" mnemonicParsing="false" text="Centre"/>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Indentation">
+                        <MenuItem onAction="#increaseIndent" mnemonicParsing="false" text="Increase"/>
+                        <MenuItem onAction="#decreaseIndent" mnemonicParsing="false" text="Decrease"/>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Colour">
+                        <MenuItem onAction="#textColour" mnemonicParsing="false" text="Text colour"/>
+                        <MenuItem onAction="#highlightColour" mnemonicParsing="false" text="Highlight colour"/>
+                    </Menu>
+                </Menu>
+            </MenuBar>
+            <HBox prefHeight="35.0">
+                <TextField onKeyTyped="#searchNotes" prefHeight="35.0" promptText="Search" minWidth="160.0"
+                           fx:id="searchBar"/>
+                <TitleView prefHeight="35.0" promptText="Note title" fx:id="titleView"
+                           style="-fx-background-color: #f4f4f4; -fx-font-weight: bold" HBox.hgrow="ALWAYS"/>
+                <ToolBar style="-fx-background-color: #f4f4f4">
+                    <ComboBoxView onAction="#moveNoteToFolder" fx:id="moveFolder" promptText="Move to..."/>
+                    <Button onAction="#createNewNote" mnemonicParsing="false" text="New" />
+                    <Button onAction="#deleteNote" mnemonicParsing="false" text="Delete" />
+                    <Button onAction="#saveNote" mnemonicParsing="false" text="Save"/>
+                </ToolBar>
+            </HBox>
+        </VBox>
+    </top>
+    <left>
+        <DirectoryView prefWidth="160.0" fx:id="directoryView" onMouseClicked="#mouseClicked"/>
+    </left>
+    <center>
+        <VBox>
+            <ToolBar fx:id="toolBar" style="-fx-background-color: #f4f4f4"/>
+            <NoteView fx:id="noteView"/>
+        </VBox>
+    </center>
+</BorderPane>
